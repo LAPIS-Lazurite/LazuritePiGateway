@@ -1,0 +1,29 @@
+#!/bin/sh
+
+# sudo rmmod DRV_802154
+# make clean
+# make
+# sudo insmod DRV_802154.ko ch=33 retry=3 expired=10
+
+
+echo "rmmod ? y or n."
+read answer
+case $answer in
+    y)
+	sudo rmmod DRV_802154
+esac
+
+echo "make & clean ? y or n."
+read answer
+case $answer in
+    y)
+	make clean
+	make
+esac
+
+echo "insmod ? y or n."
+read answer
+case $answer in
+    y)
+	sudo insmod DRV_802154.ko ch=33 retry=3 expired=10
+esac
