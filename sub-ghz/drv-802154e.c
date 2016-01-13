@@ -35,7 +35,7 @@
 #include "mac-802154e.h"
 
 // Device driver IO
-#define PHY_DATA_SIZE		256		//250 + 1
+#define PHY_DATA_SIZE		255		//250 + 1
 //static wait_queue_head_t read_q;    //poll wait
 struct list_data {				
 	uint8_t	data[PHY_DATA_SIZE];
